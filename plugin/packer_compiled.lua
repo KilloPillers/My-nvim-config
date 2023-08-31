@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/Users/killo/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["cellular-automaton.nvim"] = {
+    loaded = true,
+    path = "/Users/killo/.local/share/nvim/site/pack/packer/start/cellular-automaton.nvim",
+    url = "https://github.com/eandrju/cellular-automaton.nvim"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/Users/killo/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
@@ -285,14 +290,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-try_loadstring("\27LJ\2\n<\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
-time([[Config for nvim-autopairs]], false)
 -- Config for: nvim-tree.lua
 time([[Config for nvim-tree.lua]], true)
 try_loadstring("\27LJ\2\nÝ\2\0\0\6\0\20\0\"6\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\0\0'\2\3\0B\0\2\0029\0\2\0005\2\5\0005\3\4\0=\3\6\0025\3\a\0=\3\b\0025\3\t\0=\3\n\2B\0\2\0016\0\v\0009\0\f\0009\0\r\0'\2\14\0'\3\15\0'\4\16\0006\5\17\0B\0\5\0016\0\v\0009\0\f\0009\0\r\0'\2\14\0'\3\18\0'\4\19\0006\5\17\0B\0\5\1K\0\1\0\23:NvimTreeFocus<cr>\14<leader>f\topts\24:NvimTreeToggle<cr>\14<leader>e\6n\bset\vkeymap\bvim\ffilters\1\0\1\rdotfiles\1\tview\1\0\1\nwidth\3(\24update_focused_file\1\0\1\15update_cwd\2\1\0\1\venable\2\14nvim-tree\nsetup\22nvim-web-devicons\frequire\0", "config", "nvim-tree.lua")
 time([[Config for nvim-tree.lua]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+try_loadstring("\27LJ\2\n<\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
+time([[Config for nvim-autopairs]], false)
 -- Conditional loads
 time([[Conditional loading of telescope-fzf-native.nvim]], true)
   require("packer.load")({"telescope-fzf-native.nvim"}, {}, _G.packer_plugins)

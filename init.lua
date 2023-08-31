@@ -131,6 +131,10 @@ require('packer').startup(function(use)
     after = 'nvim-treesitter',
   }
 
+  -- Celluar automaton
+  use 'eandrju/cellular-automaton.nvim' 
+
+  -- Auto close tags
   use {
     'windwp/nvim-ts-autotag',
     after = 'nvim-treesitter',
