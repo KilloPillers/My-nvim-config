@@ -31,7 +31,7 @@ require('packer').startup(function(use)
     },
   }
   
-  use 'mfussenegger/nvim-dap'
+  use { "mfussenegger/nvim-dap", requires = {"nvim-neotest/nvim-nio"} }
   use { 'theHamsta/nvim-dap-virtual-text', requires = {"mfussenegger/nvim-dap"} }
   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
 
@@ -367,9 +367,13 @@ require('Comment').setup()
 
 -- Enable `lukas-reineke/indent-blankline.nvim`
 -- See `:help indent_blankline.txt`
-require('indent_blankline').setup {
-  char = '┊',
-  show_trailing_blankline_indent = false,
+require('ibl').setup {
+  indent = { highlight = highlight, char = '┊'},
+  whitespace = {
+    highlight = highlight,
+    remove_blankline_trail = false,
+  },
+  scope = { enabled = false },
 }
 
 -- Gitsigns
