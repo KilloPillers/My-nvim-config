@@ -199,7 +199,7 @@ _G.packer_plugins = {
     url = "https://github.com/sitiom/nvim-numbertoggle"
   },
   ["nvim-tree.lua"] = {
-    config = { "\27LJ\2\n―3\0\0\6\0\20\0\"6\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\0\0'\2\3\0B\0\2\0029\0\2\0005\2\5\0005\3\4\0=\3\6\0025\3\a\0=\3\b\0025\3\t\0=\3\n\2B\0\2\0016\0\v\0009\0\f\0009\0\r\0'\2\14\0'\3\15\0'\4\16\0006\5\17\0B\0\5\0016\0\v\0009\0\f\0009\0\r\0'\2\14\0'\3\18\0'\4\19\0006\5\17\0B\0\5\1K\0\1\0\23:NvimTreeFocus<cr>\14<leader>f\topts\24:NvimTreeToggle<cr>\14<leader>e\6n\bset\vkeymap\bvim\ffilters\1\0\1\rdotfiles\1\tview\1\0\1\nwidth\3(\24update_focused_file\1\0\4\15update_cwd\2\tview\0\ffilters\0\24update_focused_file\0\1\0\1\venable\2\14nvim-tree\nsetup\22nvim-web-devicons\frequire\0" },
+    config = { "\27LJ\2\n―3\0\0\6\0\20\0\"6\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\0\0'\2\3\0B\0\2\0029\0\2\0005\2\5\0005\3\4\0=\3\6\0025\3\a\0=\3\b\0025\3\t\0=\3\n\2B\0\2\0016\0\v\0009\0\f\0009\0\r\0'\2\14\0'\3\15\0'\4\16\0006\5\17\0B\0\5\0016\0\v\0009\0\f\0009\0\r\0'\2\14\0'\3\18\0'\4\19\0006\5\17\0B\0\5\1K\0\1\0\23:NvimTreeFocus<cr>\14<leader>f\topts\24:NvimTreeToggle<cr>\14<leader>e\6n\bset\vkeymap\bvim\ffilters\1\0\1\rdotfiles\1\tview\1\0\1\nwidth\3(\24update_focused_file\1\0\4\tview\0\ffilters\0\24update_focused_file\0\15update_cwd\2\1\0\1\venable\2\14nvim-tree\nsetup\22nvim-web-devicons\frequire\0" },
     loaded = true,
     path = "/home/killo/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
     url = "https://github.com/kyazdani42/nvim-tree.lua"
@@ -272,6 +272,15 @@ _G.packer_plugins = {
     path = "/home/killo/.local/share/nvim/site/pack/packer/start/tender.vim",
     url = "https://github.com/jacoborus/tender.vim"
   },
+  ["trouble.nvim"] = {
+    commands = { "Trouble" },
+    config = { "\27LJ\2\n表6\0\0\6\0\25\00066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\3\0009\0\4\0009\0\5\0'\2\6\0'\3\a\0'\4\b\0005\5\t\0B\0\5\0016\0\3\0009\0\4\0009\0\5\0'\2\6\0'\3\n\0'\4\v\0005\5\f\0B\0\5\0016\0\3\0009\0\4\0009\0\5\0'\2\6\0'\3\r\0'\4\14\0005\5\15\0B\0\5\0016\0\3\0009\0\4\0009\0\5\0'\2\6\0'\3\16\0'\4\17\0005\5\18\0B\0\5\0016\0\3\0009\0\4\0009\0\5\0'\2\6\0'\3\19\0'\4\20\0005\5\21\0B\0\5\0016\0\3\0009\0\4\0009\0\5\0'\2\6\0'\3\22\0'\4\23\0005\5\24\0B\0\5\1K\0\1\0\1\0\1\tdesc\28Quickfix List (Trouble)#<cmd>Trouble qflist toggle<cr>\15<leader>xQ\1\0\1\tdesc\28Location List (Trouble)$<cmd>Trouble loclist toggle<cr>\15<leader>xL\1\0\1\tdesc1LSP Definitions / references / ... (Trouble)?<cmd>Trouble lsp toggle focus=false win.position=right<cr>\15<leader>cl\1\0\1\tdesc\22Symbols (Trouble)0<cmd>Trouble symbols toggle focus=false<cr>\15<leader>cs\1\0\1\tdesc!Buffer Diagnostics (Trouble)5<cmd>Trouble diagnostics toggle filter.buf=0<cr>\15<leader>xX\1\0\1\tdesc\26Diagnostics (Trouble)(<cmd>Trouble diagnostics toggle<cr>\15<leader>xx\6n\bset\vkeymap\bvim\nsetup\ftrouble\frequire\0" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/killo/.local/share/nvim/site/pack/packer/opt/trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/home/killo/.local/share/nvim/site/pack/packer/start/vim-fugitive",
@@ -301,7 +310,7 @@ try_loadstring("\27LJ\2\n<\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K
 time([[Config for nvim-autopairs]], false)
 -- Config for: nvim-tree.lua
 time([[Config for nvim-tree.lua]], true)
-try_loadstring("\27LJ\2\n―3\0\0\6\0\20\0\"6\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\0\0'\2\3\0B\0\2\0029\0\2\0005\2\5\0005\3\4\0=\3\6\0025\3\a\0=\3\b\0025\3\t\0=\3\n\2B\0\2\0016\0\v\0009\0\f\0009\0\r\0'\2\14\0'\3\15\0'\4\16\0006\5\17\0B\0\5\0016\0\v\0009\0\f\0009\0\r\0'\2\14\0'\3\18\0'\4\19\0006\5\17\0B\0\5\1K\0\1\0\23:NvimTreeFocus<cr>\14<leader>f\topts\24:NvimTreeToggle<cr>\14<leader>e\6n\bset\vkeymap\bvim\ffilters\1\0\1\rdotfiles\1\tview\1\0\1\nwidth\3(\24update_focused_file\1\0\4\15update_cwd\2\tview\0\ffilters\0\24update_focused_file\0\1\0\1\venable\2\14nvim-tree\nsetup\22nvim-web-devicons\frequire\0", "config", "nvim-tree.lua")
+try_loadstring("\27LJ\2\n―3\0\0\6\0\20\0\"6\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\0\0'\2\3\0B\0\2\0029\0\2\0005\2\5\0005\3\4\0=\3\6\0025\3\a\0=\3\b\0025\3\t\0=\3\n\2B\0\2\0016\0\v\0009\0\f\0009\0\r\0'\2\14\0'\3\15\0'\4\16\0006\5\17\0B\0\5\0016\0\v\0009\0\f\0009\0\r\0'\2\14\0'\3\18\0'\4\19\0006\5\17\0B\0\5\1K\0\1\0\23:NvimTreeFocus<cr>\14<leader>f\topts\24:NvimTreeToggle<cr>\14<leader>e\6n\bset\vkeymap\bvim\ffilters\1\0\1\rdotfiles\1\tview\1\0\1\nwidth\3(\24update_focused_file\1\0\4\tview\0\ffilters\0\24update_focused_file\0\15update_cwd\2\1\0\1\venable\2\14nvim-tree\nsetup\22nvim-web-devicons\frequire\0", "config", "nvim-tree.lua")
 time([[Config for nvim-tree.lua]], false)
 -- Conditional loads
 time([[Conditional loading of telescope-fzf-native.nvim]], true)
@@ -317,6 +326,18 @@ vim.cmd [[ packadd nvim-ts-autotag ]]
 try_loadstring("\27LJ\2\n=\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\20nvim-ts-autotag\frequire\0", "config", "nvim-ts-autotag")
 
 time([[Sequenced loading]], false)
+
+-- Command lazy-loads
+time([[Defining lazy-load commands]], true)
+pcall(vim.api.nvim_create_user_command, 'Trouble', function(cmdargs)
+          require('packer.load')({'trouble.nvim'}, { cmd = 'Trouble', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'trouble.nvim'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('Trouble ', 'cmdline')
+      end})
+time([[Defining lazy-load commands]], false)
+
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads

@@ -41,7 +41,7 @@ require('packer').startup(function(use)
   vim.keymap.set('n', '<leader>o', function() require('dap').step_over() end)
   vim.keymap.set('n', '<leader>si', function() require('dap').step_into() end)
   vim.keymap.set('n', '<leader>so', function() require('dap').step_out() end)
-
+  
   local dap, dapui = require("dap"), require("dapui")
   dap.listeners.after.event_initialized["dapui_config"] = function()
     dapui.open()
@@ -142,6 +142,22 @@ require('packer').startup(function(use)
       require('nvim-ts-autotag').setup()
     end
   }
+
+  -- Diagnostics, references, telescope results, quickfixes and location list.
+  use {
+    "folke/trouble.nvim",
+    cmd = "Trouble", -- Lazy load with :Trouble
+    config = function()
+      require("trouble").setup()
+      vim.keymap.set("n", "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Diagnostics (Trouble)" })
+      vim.keymap.set("n", "<leader>xX", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", { desc = "Buffer Diagnostics (Trouble)" })
+      vim.keymap.set("n", "<leader>cs", "<cmd>Trouble symbols toggle focus=false<cr>", { desc = "Symbols (Trouble)" })
+      vim.keymap.set("n", "<leader>cl", "<cmd>Trouble lsp toggle focus=false win.position=right<cr>", { desc = "LSP Definitions / references / ... (Trouble)" })
+      vim.keymap.set("n", "<leader>xL", "<cmd>Trouble loclist toggle<cr>", { desc = "Location List (Trouble)" })
+      vim.keymap.set("n", "<leader>xQ", "<cmd>Trouble qflist toggle<cr>", { desc = "Quickfix List (Trouble)" })
+    end
+  }
+
   
   -- Relative Line Number plugin
   use {"sitiom/nvim-numbertoggle"}
@@ -293,6 +309,29 @@ vim.api.nvim_create_autocmd('BufWritePost', {
 -- See `:help vim.o`
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+
+-- Set clipboard settings
+vim.opt.clipboard = "unnamedplus"
+if vim.fn.has("wsl") == 1 then
+    if vim.fn.executable("wl-copy") == 0 then
+        print("wl-clipboard not found, clipboard integration won't work")
+    else
+        vim.g.clipboard = {
+          name = 'xclip',
+          copy = {
+            ["+"] = "xclip -selection clipboard",
+            ["*"] = "xclip -selection primary",
+          },
+          paste = {
+            ["+"] = "xclip -selection clipboard -o",
+            ["*"] = "xclip -selection primary -o",
+          },
+          cache_enabled = 0,
+        }
+    end
+end
+
+
 
 -- Set highlight on search
 vim.o.hlsearch = false
