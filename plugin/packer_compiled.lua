@@ -99,6 +99,12 @@ _G.packer_plugins = {
     path = "/home/killo/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["conform.nvim"] = {
+    config = { "\27LJ\2\n∆\3\0\0\5\0\18\0\0216\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\14\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\0035\4\b\0=\4\t\0035\4\n\0=\4\v\0035\4\f\0=\4\r\3=\3\15\0025\3\16\0=\3\17\2B\0\2\1K\0\1\0\19format_on_save\1\0\2\15timeout_ms\3Ù\3\15lsp_format\rfallback\21formatters_by_ft\1\0\2\19format_on_save\0\21formatters_by_ft\0\20javascriptreact\1\3\1\0\14prettierd\rprettier\21stop_after_first\2\15javascript\1\3\1\0\14prettierd\rprettier\21stop_after_first\2\trust\1\2\1\0\frustfmt\15lsp_format\rfallback\vpython\1\3\0\0\nisort\nblack\blua\1\0\5\20javascriptreact\0\trust\0\blua\0\15javascript\0\vpython\0\1\2\0\0\vstylua\nsetup\fconform\frequire\0" },
+    loaded = true,
+    path = "/home/killo/.local/share/nvim/site/pack/packer/start/conform.nvim",
+    url = "https://github.com/stevearc/conform.nvim"
+  },
   ["copilot.vim"] = {
     loaded = true,
     path = "/home/killo/.local/share/nvim/site/pack/packer/start/copilot.vim",
@@ -312,6 +318,10 @@ time([[Config for nvim-autopairs]], false)
 time([[Config for nvim-tree.lua]], true)
 try_loadstring("\27LJ\2\nÅ\3\0\0\6\0\20\0\"6\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\0\0'\2\3\0B\0\2\0029\0\2\0005\2\5\0005\3\4\0=\3\6\0025\3\a\0=\3\b\0025\3\t\0=\3\n\2B\0\2\0016\0\v\0009\0\f\0009\0\r\0'\2\14\0'\3\15\0'\4\16\0006\5\17\0B\0\5\0016\0\v\0009\0\f\0009\0\r\0'\2\14\0'\3\18\0'\4\19\0006\5\17\0B\0\5\1K\0\1\0\23:NvimTreeFocus<cr>\14<leader>f\topts\24:NvimTreeToggle<cr>\14<leader>e\6n\bset\vkeymap\bvim\ffilters\1\0\1\rdotfiles\1\tview\1\0\1\nwidth\3(\24update_focused_file\1\0\4\tview\0\ffilters\0\24update_focused_file\0\15update_cwd\2\1\0\1\venable\2\14nvim-tree\nsetup\22nvim-web-devicons\frequire\0", "config", "nvim-tree.lua")
 time([[Config for nvim-tree.lua]], false)
+-- Config for: conform.nvim
+time([[Config for conform.nvim]], true)
+try_loadstring("\27LJ\2\n∆\3\0\0\5\0\18\0\0216\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\14\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\0035\4\b\0=\4\t\0035\4\n\0=\4\v\0035\4\f\0=\4\r\3=\3\15\0025\3\16\0=\3\17\2B\0\2\1K\0\1\0\19format_on_save\1\0\2\15timeout_ms\3Ù\3\15lsp_format\rfallback\21formatters_by_ft\1\0\2\19format_on_save\0\21formatters_by_ft\0\20javascriptreact\1\3\1\0\14prettierd\rprettier\21stop_after_first\2\15javascript\1\3\1\0\14prettierd\rprettier\21stop_after_first\2\trust\1\2\1\0\frustfmt\15lsp_format\rfallback\vpython\1\3\0\0\nisort\nblack\blua\1\0\5\20javascriptreact\0\trust\0\blua\0\15javascript\0\vpython\0\1\2\0\0\vstylua\nsetup\fconform\frequire\0", "config", "conform.nvim")
+time([[Config for conform.nvim]], false)
 -- Conditional loads
 time([[Conditional loading of telescope-fzf-native.nvim]], true)
   require("packer.load")({"telescope-fzf-native.nvim"}, {}, _G.packer_plugins)
@@ -319,12 +329,12 @@ time([[Conditional loading of telescope-fzf-native.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-treesitter ]]
-vim.cmd [[ packadd nvim-treesitter-textobjects ]]
 vim.cmd [[ packadd nvim-ts-autotag ]]
 
 -- Config for: nvim-ts-autotag
 try_loadstring("\27LJ\2\n=\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\20nvim-ts-autotag\frequire\0", "config", "nvim-ts-autotag")
 
+vim.cmd [[ packadd nvim-treesitter-textobjects ]]
 time([[Sequenced loading]], false)
 
 -- Command lazy-loads
